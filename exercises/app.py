@@ -3,8 +3,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-	return render_template("index.html")
- 		
+    movies = ["in time","the Immitation game"]
+	
+    return render_template(
+    	"index.html",
+    	movies = movies,
+    	no_movies=False)
 
 
 if __name__ == '__main__':
